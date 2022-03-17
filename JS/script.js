@@ -41,6 +41,7 @@ inputName[1].addEventListener('click', () => {
     boxEach[0].classList.remove('active')
     inputName[2].value = ''
     boxEach[2].classList.remove('active')
+    inputLiters.value = ''
     boxEach[1].classList.add('active')
 })
 inputName[2].addEventListener('click', () => {
@@ -48,6 +49,7 @@ inputName[2].addEventListener('click', () => {
     boxEach[0].classList.remove('active')
     inputName[1].value = ''
     boxEach[1].classList.remove('active')
+    inputLiters.value = ''
     boxEach[2].classList.add('active')
 })
 
