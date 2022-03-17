@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 -15px;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 29px;
+    text-align: center;
+    color: #9A9A9A;
+    margin: 50px 0;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+}
+.col-4 {
+    width: 33.333%;
+    padding: 0 15px;
+}
+
+.boxImg {
+    border: 1px solid rgba(49, 50, 51, 0.121);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 37px 0;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #E0E2E6 0%, #FFFFFF 100%);
+    box-shadow: rgba(49, 50, 51, 0.121);
+    margin-bottom: 9px;
+}
+.boxImg.active {
+    background: linear-gradient(180deg, #30B3BB 0%, #BAFBFF 100%)
+}
+
+.petrolName {
+    background: #F7F9FD;
+    box-shadow: 4.08216e-16px 6.66667px 13.3333px rgba(49, 50, 51, 0.1455), inset -1.02507e-16px -1.67407px 1.67407px rgba(235, 237, 240, 0.3), inset 1.02507e-16px 1.67407px 1.67407px #FFFFFF;
+    border-radius: 15px;
+    padding: 20px 12px;
+    margin-bottom: 90px;
+}
+
+.petrolType {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+input::placeholder{
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+   color: #c2c2c2;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.inputName{
+    border: none;
+    padding: 5px 8px;
+}
+
+.check{
+    display: flex;
+    flex-direction: column;
+}
+
+.totalLiters{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 10px;
+}
+
+.inputLiters {
+    width: 252px;
+    height: 40px;
+    border: 1px solid #AFACAC;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+}
+
+.check-btn{
+    width: 42%;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #9A9A9A;
+    background-color: #9A9A9A;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.5s;
+    margin-bottom: 25px;
+}
+
+.check-btn:hover{
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #9A9A9A;
+    color: #9A9A9A;
+}
+
+.litersSubtitle {
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.petrolTypeBill, .priceForOne, .total-iters__check, .totalVat, .totalPrice{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 5px;
+}
+
+
+
+

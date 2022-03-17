@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="./style.css" rel="stylesheet">
+    <link href="./CSS/style.css" rel="stylesheet">
 </head>
 <body>
 <section class="petrolBishkek">
@@ -15,46 +15,48 @@
         <div class="row">
             <div class="col-4">
                 <div class="boxImg">
-                <img src="./images/Vector.png" class="imgPetrol">
-            </div>
+                    <img src="./images/Vector.png" class="imgPetrol">
+                </div>
                 <div class="petrolName">
-                    <p class="petrolType">AI95:</p>
-                    <input class="inputName" type="text" placeholder="Price/1L">
+                    <label for="ai95" class="petrolType">AI95:</label>
+                    <input class="inputName" type="text" placeholder="Price/1L" id="ai95">
                 </div>
-
-                <label for="totalLiters" class="totalLiters">Total liters</label>
-                <br><input id="totalLiters" class="inputLiters">
-                <div class="litersColumn">
-                    <p class="litersSubtitle">Bill:</p>
-                    <p class="petrolType"><span>Petrol type:</span> AI100</p>
-                    <p class="priceForOne"><span>Price for one liter:</span> 1.3$ </p>
-                    <p class="totalLiters"><span>Total liters:</span>13</p>
-                    <p class="totalLiters"><span>VAT:</span> 5%</p>
-                </div>
-                <div class="totalPrice">Total price:17.745$ </div>
             </div>
             <div class="col-4">
                 <div class="boxImg">
                     <img src="./images/Vector.png" class="imgPetrol">
                 </div>
                 <div class="petrolName">
-                <p class="petrolType">AI98:</p>
-                <input class="inputName>" type="text" >
-            </div>
-
+                    <label for="ai98" class="petrolType">AI98:</label>
+                    <input class="inputName" type="text" placeholder="Price/1L" id="ai98">
+                </div>
             </div>
             <div class="col-4">
                 <div class="boxImg">
                     <img src="./images/Vector.png" class="imgPetrol">
                 </div>
                 <div class="petrolName">
-                <p class="petrolType">AI100:</p>
-                <input class="inputName>" type="text" placeholder="1.3">
+                    <label for="ai100" class="petrolType">AI100:</label>
+                    <input class="inputName" type="text" placeholder="Price/1L" id="ai100">
                 </div>
+            </div>
+            <div class="col-4">
+                <div class="check">
+                    <label for="totalLiters" class="totalLiters">Total liters</label>
+                    <input id="totalLiters" class="inputLiters">
+                    <button class="check-btn">Fill out a check</button>
+                </div>
+
+                <p class="litersSubtitle">Bill:</p>
+                <p class="petrolTypeBill">Petrol type: <span></span></p>
+                <p class="priceForOne">Price for one liter: <span></span></p>
+                <p class="total-iters__check">Total liters:<span></span></p>
+                <p class="totalVat">VAT: 5%</p>
+                <p class="totalPrice">Total price: <span></span></p>
             </div>
         </div>
     </div>
 </section>
-<script src="./script.js"></script>
+<script src="./JS/script.js"></script>
 </body>
 </html>
