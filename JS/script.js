@@ -1,14 +1,12 @@
-const boxEach = document.querySelectorAll('.boxImg')
-const inputName = document.querySelectorAll('.inputName')
-
-const inputLiters = document.querySelector('.inputLiters')
-const button = document.querySelector('.check-btn')
-
-const petrolTypeBill = document.querySelector('.petrolTypeBill span')
-const priceForOneLiter = document.querySelector('.priceForOne span')
-const totalLitersBill = document.querySelector('.totalLitersBIll span')
-const totalPrice = document.querySelector('.totalPrice span')
-
+const boxEach = document.querySelectorAll('.boxImg')/*лейболы с картинкой*/
+const inputName = document.querySelectorAll('.inputName')/*инпуты для цены*/
+const inputLiters = document.querySelector('.inputLiters')/* инпут для количество*/
+const button = document.querySelector('.check-btn')/*кнопка для заполнении чека*/
+const petrolTypeBill = document.querySelector('.petrolTypeBill span')/*тип топлево вчеке */
+const priceForOneLiter = document.querySelector('.priceForOne span')/*цена топлево в чеке*/
+const totalLitersBill = document.querySelector('.totalLitersBIll span')/*количество топлево в чеке*/
+const totalPrice = document.querySelector('.totalPrice span')/*сумма для оплаты в чеке*/
+/*перебираем для закрашивание лейбола*/
 boxEach.forEach(item => {
     item.addEventListener('click',()=>{
         boxEach.forEach((item, index)=>{
@@ -17,7 +15,7 @@ boxEach.forEach(item => {
         item.classList.add('active')
     })
 })
-
+/*перебераем для отчистки инпутов цены и количество*/
 inputName[0].addEventListener('click', () => {
     boxEach[2].classList.remove('active')
     inputName[2].value = ''
@@ -42,9 +40,11 @@ inputName[2].addEventListener('click', () => {
     inputLiters.value = ''
     boxEach[2].classList.add('active')
 })
+/*типы топлево для подставление в чек*/
 const ai95 = 'Ai 95'
 const ai98 = 'Ai 98'
 const ai100 = 'Ai 100'
+/*кнопка для печати чека после проверок*/
 button.addEventListener('click', () => {
     if(inputName[0].value.length !== 0 && inputLiters.value.length !== 0){
         btn1()
@@ -54,6 +54,7 @@ button.addEventListener('click', () => {
         btn3()
     }
 })
+/*функция выбренного топлево для проверки и печати чека*/
 function btn1 (){
     if (Number(inputName[0].value) !== Number(inputName[0].value)){
     alert('Водите только цыфры для цены топлево')
