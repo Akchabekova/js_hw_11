@@ -15,7 +15,7 @@ boxEach.forEach(item => {
         item.classList.add('active')
     })
 })
-/*перебераем для отчистки инпутов цены и количество*/
+/*перебираем для отчистки инпутов цены и количество*/
 inputName[0].addEventListener('click', () => {
     boxEach[2].classList.remove('active')
     inputName[2].value = ''
