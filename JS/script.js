@@ -1,12 +1,12 @@
-const boxEach = document.querySelectorAll('.boxImg')/*лейболы с картинкой*/
+const boxEach = document.querySelectorAll('.boxImg')/*лейблы с картинкой*/
 const inputName = document.querySelectorAll('.inputName')/*инпуты для цены*/
-const inputLiters = document.querySelector('.inputLiters')/* инпут для количество*/
+const inputLiters = document.querySelector('.inputLiters')/* инпут для количество топлево*/
 const button = document.querySelector('.check-btn')/*кнопка для заполнении чека*/
-const petrolTypeBill = document.querySelector('.petrolTypeBill span')/*тип топлево вчеке */
+const petrolTypeBill = document.querySelector('.petrolTypeBill span')/*тип топлево в чеке */
 const priceForOneLiter = document.querySelector('.priceForOne span')/*цена топлево в чеке*/
 const totalLitersBill = document.querySelector('.totalLitersBIll span')/*количество топлево в чеке*/
 const totalPrice = document.querySelector('.totalPrice span')/*сумма для оплаты в чеке*/
-/*перебираем для закрашивание лейбола*/
+/*перебираем для закрашивание лейбла*/
 boxEach.forEach(item => {
     item.addEventListener('click',()=>{
         boxEach.forEach((item, index)=>{
