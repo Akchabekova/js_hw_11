@@ -24,7 +24,6 @@ boxEach.forEach(item => {
             alert('Водите только цыфры для количество топлево')
         }
         item.classList.add('active')
-
     })
 })
 
