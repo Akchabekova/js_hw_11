@@ -14,15 +14,6 @@ boxEach.forEach(item => {
         boxEach.forEach((item, index)=>{
             item.classList.remove('active')
         })
-        if(inputName[0].value === ''){
-            alert('Выберите тип топлево и цену за 1 (один) литр')
-        }else if (inputName[0].value === +inputName[0].value){
-            alert('Водите только цыфры для цены топлево')
-        }else if(inputLiters.value === ''){
-            alert('Выберите количество топлево')
-        }else if (inputLiters.value === inputLiters[0].value.toString()){
-            alert('Водите только цыфры для количество топлево')
-        }
         item.classList.add('active')
     })
 })
@@ -51,17 +42,28 @@ inputName[2].addEventListener('click', () => {
     inputLiters.value = ''
     boxEach[2].classList.add('active')
 })
-
+const btn = [inputName]
 const ai95 = 'Ai 95'
 const ai98 = 'Ai 98'
 const ai100 = 'Ai 100'
 button.addEventListener('click', () => {
-    if(inputName[0].value !== '' && inputLiters.value !== ''){
+    btn.forEach((item) => {
+        if(item.length === 0){
+            alert('Выберите тип топлево и цену за 1 (один) литр')
+        }else if (Number(inputName[0].value) !== Number(inputName[0].value)){
+            alert('Водите только цыфры для цены топлево')
+        }else if(inputLiters.value.length === 0){
+            alert('Выберите количество топлево')
+        }else if (Number(inputLiters.value) !== Number(inputLiters.value)){
+            alert('Водите только цыфры для количество топлево')
+        }
+    })
+        if(inputName[0].value.length !== 0 && inputLiters.value.length !== 0){
         petrolTypeBill.textContent = ai95
         priceForOneLiter.textContent = `${inputName[0].value}$`
         totalLitersBill.textContent = `${inputLiters.value}`
         totalPrice.textContent = `${(inputName[0].value * inputLiters.value) + (inputName[0].value * inputLiters.value * 0.05)}`
-    }else if(inputName[1].value !== '' && inputLiters.value !== ''){
+    }else if(inputName[1].value.length !== 0 && inputLiters.value.length !== 0){
         petrolTypeBill.textContent = ai98
         priceForOneLiter.textContent = `${inputName[1].value}$`
         totalLitersBill.textContent = `${inputLiters.value}`
