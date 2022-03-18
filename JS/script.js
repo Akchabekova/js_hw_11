@@ -42,46 +42,57 @@ inputName[2].addEventListener('click', () => {
     inputLiters.value = ''
     boxEach[2].classList.add('active')
 })
-const btn = [inputName]
 const ai95 = 'Ai 95'
 const ai98 = 'Ai 98'
 const ai100 = 'Ai 100'
 button.addEventListener('click', () => {
-    btn.forEach((item) => {
-        if(item.length === 0){
-            alert('Выберите тип топлево и цену за 1 (один) литр')
-        }else if (Number(inputName[0].value) !== Number(inputName[0].value)){
-            alert('Водите только цыфры для цены топлево')
-        }else if(inputLiters.value.length === 0){
-            alert('Выберите количество топлево')
-        }else if (Number(inputLiters.value) !== Number(inputLiters.value)){
-            alert('Водите только цыфры для количество топлево')
-        }
-    })
-        if(inputName[0].value.length !== 0 && inputLiters.value.length !== 0){
-        petrolTypeBill.textContent = ai95
-        priceForOneLiter.textContent = `${inputName[0].value}$`
-        totalLitersBill.textContent = `${inputLiters.value}`
-        totalPrice.textContent = `${(inputName[0].value * inputLiters.value) + (inputName[0].value * inputLiters.value * 0.05)}`
-    }else if(inputName[1].value.length !== 0 && inputLiters.value.length !== 0){
-        petrolTypeBill.textContent = ai98
-        priceForOneLiter.textContent = `${inputName[1].value}$`
-        totalLitersBill.textContent = `${inputLiters.value}`
-        totalPrice.textContent = `${(inputName[1].value * inputLiters.value) + (inputName[1].value * inputLiters.value * 0.05)}`
-
-    }else if(inputName[2].value !== '' && inputLiters.value !== ''){
+    if(inputName[0].value.length !== 0 && inputLiters.value.length !== 0){
+        btn1()
+    }else if (inputName[1].value.length !== 0 && inputLiters.value.length !== 0){
+        btn2()
+    }else if(inputName[2].value.length !== 0 && inputLiters.value.length !== 0){
+        btn3()
+    }
+})
+function btn1 (){
+    if (Number(inputName[0].value) !== Number(inputName[0].value)){
+    alert('Водите только цыфры для цены топлево')
+}else if (Number(inputLiters.value) !== Number(inputLiters.value)){
+    alert('Водите только цыфры для количество топлево')
+}
+    if(inputName[0].value.length !== 0 && inputLiters.value.length !== 0){
+    petrolTypeBill.textContent = ai95
+    priceForOneLiter.textContent = `${inputName[0].value}$`
+    totalLitersBill.textContent = `${inputLiters.value}`
+    totalPrice.textContent = `${(inputName[0].value * inputLiters.value) + (inputName[0].value * inputLiters.value * 0.05)}`
+}
+}
+function btn2 (){
+    if (Number(inputName[1].value) !== Number(inputName[1].value)){
+        alert('Водите только цыфры для цены топлево')
+    }else if (Number(inputLiters.value) !== Number(inputLiters.value)){
+        alert('Водите только цыфры для количество топлево')
+    }
+    if(inputName[1].value.length !== 0 && inputLiters.value.length !== 0){
+    petrolTypeBill.textContent = ai98
+    priceForOneLiter.textContent = `${inputName[1].value}$`
+    totalLitersBill.textContent = `${inputLiters.value}`
+    totalPrice.textContent = `${(inputName[1].value * inputLiters.value) + (inputName[0].value * inputLiters.value * 0.05)}`
+}
+}
+function btn3 (){
+    if (Number(inputName[2].value) !== Number(inputName[2].value)){
+        alert('Водите только цыфры для цены топлево')
+    }else if (Number(inputLiters.value) !== Number(inputLiters.value)){
+        alert('Водите только цыфры для количество топлево')
+    }
+    if(inputName[2].value.length !== 0 && inputLiters.value.length !== 0){
         petrolTypeBill.textContent = ai100
         priceForOneLiter.textContent = `${inputName[2].value}$`
         totalLitersBill.textContent = `${inputLiters.value}`
-        totalPrice.textContent = `${(inputName[2].value * inputLiters.value) + (inputName[2].value * inputLiters.value * 0.05)}`
+        totalPrice.textContent = `${(inputName[2].value * inputLiters.value) + (inputName[0].value * inputLiters.value * 0.05)}`
     }
-})
-
-
-
-
-
-
+}
 
 
 
