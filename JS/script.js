@@ -77,7 +77,7 @@ function btn2 (){
     petrolTypeBill.textContent = ai98
     priceForOneLiter.textContent = `${inputName[1].value}$`
     totalLitersBill.textContent = `${inputLiters.value}`
-    totalPrice.textContent = `${(inputName[1].value * inputLiters.value) + (inputName[0].value * inputLiters.value * 0.05)}`
+    totalPrice.textContent = `${(inputName[1].value * inputLiters.value) + (inputName[1].value * inputLiters.value * 0.05)}`
 }
 }
 function btn3 (){
@@ -90,7 +90,7 @@ function btn3 (){
         petrolTypeBill.textContent = ai100
         priceForOneLiter.textContent = `${inputName[2].value}$`
         totalLitersBill.textContent = `${inputLiters.value}`
-        totalPrice.textContent = `${(inputName[2].value * inputLiters.value) + (inputName[0].value * inputLiters.value * 0.05)}`
+        totalPrice.textContent = `${(inputName[2].value * inputLiters.value) + (inputName[2].value * inputLiters.value * 0.05)}`
     }
 }
 
